@@ -1,7 +1,43 @@
-<mvc:View controllerName="project1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.View1" displayBlock="true">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <VBox width="100%" direction="Column" id="vbox0">
+                <items>
+                    <HBox width="100%" id="hbox0">
+                        <items>
+                            <VBox width="30%" direction="Column" id="vbox0_1668172070145">
+                                <items>
+                                    <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form0" maxContainerCols="1">
+                                        <sap.ui.layout.form:content>
+                                            <sap.ui.core:Title text="{i18n>crm}" id="title0" />
+                                            <HBox width="100%" id="hbox0_1668172981008">
+                                                <Text xmlns="sap.m" text="Queue depth" id="text0" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
+
+                                                <Text xmlns="sap.m" text="60" id="text1" class="sapUiLargeMarginBegin sapUiLargeMarginBegin" />
+                                            </HBox>
+                                        </sap.ui.layout.form:content>
+
+                                        <List id="list0" class="sapUiTinyMarginBottom">
+                                            <items>
+                                                <StandardListItem title="system errors" info="7" id="item2" />
+                                                <StandardListItem title="App Erros" info="259" id="item1" />
+                                                <StandardListItem title="No of Threads" info="345" id="item3" />
+                                            </items>
+                                        </List>
+
+                                        <HBox width="100%" id="hbox1">
+                                            <Label text="Updated at" width="100%" id="label0" class="sapUiLargeMarginEnd" />
+                                            <Text xmlns="sap.m" text="4th Nov 202" id="text2" class="sapUiLargeMarginBegin"/>
+                                        </HBox>
+                                    </sap.ui.layout.form:SimpleForm>
+                                </items>
+                            </VBox>
+                            <VBox width="30%" direction="Column" id="vbox2" />
+                            <VBox width="40%" direction="Column" id="vbox3" />
+                        </items>
+                    </HBox>
+                </items>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
