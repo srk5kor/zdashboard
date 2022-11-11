@@ -16,9 +16,53 @@ modules:
       - project1.zip
       name: project1
       target-path: resources/
+    - artifacts:
+      - zapp1.zip
+      name: zapp1
+      target-path: resources/
 - name: project1
   type: html5
   path: project1
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: zdashboard-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: zdashboard-destination-service
+    parameters:
+      content-target: true
+  - name: zdashboard-repo-host
+    parameters:
+      service-key:
+        name: zdashboard-repo-host-key
+  - name: uaa_zdashboard
+    parameters:
+      service-key:
+        name: uaa_zdashboard-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: com_bosch_zdashboard_repo_host
+          ServiceInstanceName: zdashboard-html5-srv
+          ServiceKeyName: zdashboard-repo-host-key
+          sap.cloud.service: com.bosch
+        - Authentication: OAuth2UserTokenExchange
+          Name: com_bosch_uaa_zdashboard
+          ServiceInstanceName: zdashboard-xsuaa-service
+          ServiceKeyName: uaa_zdashboard-key
+          sap.cloud.service: com.bosch
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: zapp1
+  type: html5
+  path: zapp1
   build-parameters:
     build-result: dist
     builder: custom
@@ -37,7 +81,7 @@ resources:
   type: org.cloudfoundry.managed-service
   parameters:
     config:
-      HTML5Runtime_enabled: false
+      HTML5Runtime_enabled: true
       init_data:
         instance:
           destinations:
@@ -51,5 +95,12 @@ resources:
     service: destination
     service-name: zdashboard-destination-service
     service-plan: lite
+- name: uaa_zdashboard
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: zdashboard-xsuaa-service
+    service-plan: application
 parameters:
   deploy_mode: html5-repo
