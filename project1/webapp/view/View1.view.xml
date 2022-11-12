@@ -18,7 +18,7 @@
                                     <!-- </sap.ui.layout.form:content> -->
                                     <List id="list0" class="sapUiTinyMarginBottom">
                                         <items>
-                                            <StandardListItem title="system errors" info="7" id="item2"  press="onOpenSystemDialog" />
+                                            <StandardListItem title="system errors" info="{oCRMModel>/d/results/0/DimensionWidth}" id="item2"  press="onOpenSystemDialog" infoState="Error"/>
                                             <StandardListItem title="App Erros" info="259" id="item1" press="onOpenAppDialog" />
                                             <StandardListItem title="No of Threads" info="345" id="item3"  press="onOpenThreadDialog"/>
                                         </items>
