@@ -5,14 +5,14 @@
                 <items>
                     <HBox width="100%" id="hbox0">
                         <VBox width="30%" direction="Column" id="crmcontainer">
+                        <!-- CRM -->
                             <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form0" maxContainerCols="1">
                                 <!-- <sap.ui.layout.form:content> -->
                                 
                                     <sap.ui.core:Title text="{i18n>crm}" id="title0" />
                                     <HBox width="100%" id="hbox0_1668172981008">
-                                        <Text xmlns="sap.m" text="Queue depth" id="text0" class="sapUiMediumMarginTop sapUiSmallMarginEnd" />
-
-                                        <NumericContent value="{oCRMModel>/d/results/0/RatingCount}" valueColor="Critical" class="sapUiTinyMarginBegin sapUiTinyMarginTop" press="onOpenQueueDialog" id="nc1" />
+                                        <Text xmlns="sap.m" text="Queue depth" id="text0" class="sapUiMediumMarginBegin" />
+                                        <NumericContent value="{oCRMModel>/d/results/0/RatingCount}" valueColor="Critical"  press="onOpenQueueDialog" id="nc1" />
                                     </HBox>
                                     
                                     <!-- </sap.ui.layout.form:content> -->
@@ -26,13 +26,14 @@
                                 
                                 <HBox width="100%" id="hbox1">
                                     <Label text="Updated at" width="100%" id="label0" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 2022" id="text2" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="{oCRMModel>/d/results/0/LastModified}" id="text2" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
 
+                            <!-- PLM  -->
                             <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form0_1" maxContainerCols="1">
                                 <sap.ui.layout.form:content>
-                                    <sap.ui.core:Title text="{i18n>sap}" id="title0_1" />
+                                    <sap.ui.core:Title text="{i18n>plm}" id="title0_1" />
                                     <HBox width="100%" id="hbox0_1668172981008_1">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0_1" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
 
@@ -50,105 +51,111 @@
 
                                 <HBox width="100%" id="hbox1_1_1">
                                     <Label text="Updated at" width="100%" id="label0_1_1" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 202" id="text2_1_1" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="{oCRMModel>/d/results/1/LastModified}" id="text2_1_1" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
                         </VBox>
-                        <VBox width="30%" direction="Column" id="vbox2">
+                        <!-- ECC  -->
+                        <VBox width="30%" direction="Column" id="ecccontainer">
+
+                        
                             <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form2" maxContainerCols="1">
                                 <sap.ui.layout.form:content>
-                                    <sap.ui.core:Title text="{i18n>crm}" id="title2" />
+                                    <sap.ui.core:Title text="{i18n>ecc}" id="title2" />
                                     <HBox width="100%" id="hbox0_1668172981008_2">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0_2" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
 
-                                        <Text xmlns="sap.m" text="60" id="text1_2" class="sapUiLargeMarginBegin sapUiLargeMarginBegin" />
+                                        <NumericContent value="{oECCModel>/d/results/2/RatingCount}" valueColor="Critical"  press="onOpenQueueDialog" id="nc3" />
                                     </HBox>
                                 </sap.ui.layout.form:content>
 
                                 <List id="list0_2" class="sapUiTinyMarginBottom">
                                     <items>
-                                        <StandardListItem title="system errors" info="7" id="item2_2" />
-                                        <StandardListItem title="App Erros" info="259" id="item1_2" />
-                                        <StandardListItem title="No of Threads" info="345" id="item3_2" />
+                                        <StandardListItem title="system errors" info="{oECCModel>/d/results/2/DimensionWidth}" id="item2_2"  infoState="Error"/>
+                                        <StandardListItem title="App Erros" info="{oECCModel>/d/results/2/DimensionDepth}" id="item1_2"  infoState="Error"/>
+                                        <StandardListItem title="No of Threads" info="{oECCModel>/d/results/2/WeightUnit}" id="item3_2"  infoState="Success"/>
                                     </items>
                                 </List>
 
                                 <HBox width="100%" id="hbox1_2">
                                     <Label text="Updated at" width="100%" id="label0_2" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 202" id="text2_2" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="{oECCModel>/d/results/2/LastModified}" id="text2_2" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
 
+                            <!-- JAVA  -->
                             <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form0_3" maxContainerCols="1">
                                 <sap.ui.layout.form:content>
-                                    <sap.ui.core:Title text="{i18n>sap}" id="title0_3" />
+                                    <sap.ui.core:Title text="{i18n>java}" id="title0_3" />
                                     <HBox width="100%" id="hbox0_1668172981008_3">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0_3" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
 
-                                        <Text xmlns="sap.m" text="60" id="text1_3" class="sapUiLargeMarginBegin sapUiLargeMarginBegin" />
+                                        <NumericContent value="{oECCModel>/d/results/3/RatingCount}" valueColor="Critical"  press="onOpenQueueDialog" id="nc4" />
                                     </HBox>
                                 </sap.ui.layout.form:content>
 
                                 <List id="list0_3" class="sapUiTinyMarginBottom">
                                     <items>
-                                        <StandardListItem title="system errors" info="7" id="item2_3" />
-                                        <StandardListItem title="App Erros" info="259" id="item1_3" />
-                                        <StandardListItem title="No of Threads" info="345" id="item3_3" />
+                                        <StandardListItem title="system errors" info="{oECCModel>/d/results/3/DimensionWidth}" id="item2_3"  infoState="Error"/>
+                                        <StandardListItem title="App Erros" info="{oECCModel>/d/results/3/DimensionDepth}" id="item1_3"  infoState="Error"/>
+                                        <StandardListItem title="No of Threads" info="{oECCModel>/d/results/3/WeightUnit}" id="item3_3"  infoState="Success"/>
                                     </items>
                                 </List>
 
                                 <HBox width="100%" id="hbox1_1_3">
                                     <Label text="Updated at" width="100%" id="label0_1_3" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 202" id="text2_1_3" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="{oECCModel>/d/results/3/LastModified}" id="text2_1_3" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
                         </VBox>
-                        <VBox width="40%" direction="Column" id="vbox3">
+                        <VBox width="40%" direction="Column" id="btwcontainer">
+                        <!-- BIW -->
                             <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form2_4" maxContainerCols="1">
                                 <sap.ui.layout.form:content>
-                                    <sap.ui.core:Title text="{i18n>crm}" id="title2_4" />
+                                    <sap.ui.core:Title text="{i18n>biw}" id="title2_4" />
                                     <HBox width="100%" id="hbox0_1668172981008_4">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0_4" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
 
-                                        <Text xmlns="sap.m" text="60" id="text1_4" class="sapUiLargeMarginBegin sapUiLargeMarginBegin" />
+                                        <NumericContent value="{oBTWModel>/d/results/5/RatingCount}" valueColor="Critical"  press="onOpenQueueDialog" id="nc5" />
                                     </HBox>
                                 </sap.ui.layout.form:content>
 
                                 <List id="list0_4" class="sapUiTinyMarginBottom">
                                     <items>
-                                        <StandardListItem title="system errors" info="7" id="item2_4" />
-                                        <StandardListItem title="App Erros" info="259" id="item1_4" />
-                                        <StandardListItem title="No of Threads" info="345" id="item3_4" />
+                                        <StandardListItem title="system errors" info="{oBTWModel>/d/results/4/DimensionWidth}" id="item2_4"  infoState="Error"/>
+                                        <StandardListItem title="App Erros" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item1_4"  infoState="Error"/>
+                                        <StandardListItem title="No of Threads" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item3_4"  infoState="Success"/>
                                     </items>
                                 </List>
 
                                 <HBox width="100%" id="hbox1_4">
                                     <Label text="Updated at" width="100%" id="label0_4" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 202" id="text2_4" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="{oBTWModel>/d/results/3/LastModified}" id="text2_4" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
 
+                            <!-- AWS -->
                             <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form0_5" maxContainerCols="1">
                                 <sap.ui.layout.form:content>
-                                    <sap.ui.core:Title text="{i18n>sap}" id="title0_5" />
+                                    <sap.ui.core:Title text="{i18n>aws}" id="title0_5" />
                                     <HBox width="100%" id="hbox0_1668172981008_5">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0_5" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
 
-                                        <Text xmlns="sap.m" text="60" id="text1_5" class="sapUiLargeMarginBegin sapUiLargeMarginBegin" />
+                                        <NumericContent value="{oCRMModel>/d/results/6/RatingCount}" valueColor="Critical"  press="onOpenQueueDialog" id="nc6" />
                                     </HBox>
                                 </sap.ui.layout.form:content>
 
-                                <List id="list0_5" class="sapUiTinyMarginBottom">
+                                <List id="list0_5" class="sapUiTinyMarginBottom" >
                                     <items>
-                                        <StandardListItem title="system errors" info="7" id="item2_5" />
-                                        <StandardListItem title="App Erros" info="259" id="item1_5" />
-                                        <StandardListItem title="No of Threads" info="345" id="item3_5" />
+                                        <StandardListItem title="system errors" info="{oBTWModel>/d/results/5/DimensionWidth}" id="item2_5"   infoState="Error"/>
+                                        <StandardListItem title="App Erros" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item1_5"  infoState="Error" />
+                                        <StandardListItem title="No of Threads" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item3_5"  infoState="Success"/>
                                     </items>
                                 </List>
 
                                 <HBox width="100%" id="hbox1_1_5">
                                     <Label text="Updated at" width="100%" id="label0_1_5" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 202" id="text2_1_5" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="{oBTWModel>/d/results/4/LastModified}" id="text2_1_5" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
                         </VBox>
