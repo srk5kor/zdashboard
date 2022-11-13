@@ -20,6 +20,21 @@ sap.ui.define([
 
                 this.getView().byId("crmcontainer").setModel(oCRMModel, "oCRMModel")
 
+            },
+
+            onAfterRendering(){
+                // ecc 
+                var oECCModel = new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/Products")
+
+                this.getView().byId("ecccontainer").setModel(oECCModel, "oECCModel")
+
+            },
+            onBeforeRendering(){
+                // ecc 
+                var oBTWModel = new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/Products")
+
+                this.getView().byId("btwcontainer").setModel(oBTWModel, "oBTWModel")
+
             }
         });
     });
