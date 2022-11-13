@@ -1,11 +1,11 @@
 sap.ui.define([    
     "sap/ui/core/mvc/Controller",
-    'ux/project1/Formatter',
+    'ux/project1/utils/Formatter',
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller,Formatter) {
         "use strict";
         
         return Controller.extend("project1.controller.View1", {
