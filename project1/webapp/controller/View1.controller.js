@@ -1,13 +1,15 @@
-sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+sap.ui.define([    
+    "sap/ui/core/mvc/Controller",
+    './Formatter',
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller,Formatter) {
         "use strict";
 
         return Controller.extend("project1.controller.View1", {
+            Formatter:Formatter,
             onInit: function () {
                 
                 var sServiceUrl = "/sap/opu/odata/sap/EPM_REF_APpS_PO_APV_SRV/"

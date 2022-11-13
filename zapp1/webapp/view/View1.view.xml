@@ -1,7 +1,11 @@
-<mvc:View controllerName="zapp1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View controllerName="zapp1.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <IconTabBar id="idIconTabBar" select=".onFilterSelect" class="sapUiResponsiveContentPadding">
+            <items>
+                <IconTabFilter showAll="true" count="{/ProductCollectionStats/Counts/Total}" text="Products" key="All" id="it1" />
+            </items>
+        </IconTabBar>
+
         <content />
     </Page>
 </mvc:View>
