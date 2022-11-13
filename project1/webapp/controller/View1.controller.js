@@ -1,18 +1,18 @@
 sap.ui.define([    
     "sap/ui/core/mvc/Controller",
-    './Formatter',
+    // './Formatter',
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller,Formatter) {
+    function (Controller) {
         "use strict";
-
+        // Formatter:Formatter
         return Controller.extend("project1.controller.View1", {
-            Formatter:Formatter,
+            // Formatter:Formatter,
             onInit: function () {
                 
-                var sServiceUrl = "/sap/opu/odata/sap/EPM_REF_APpS_PO_APV_SRV/"
+                var sServiceUrl = "/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/"
 
                 var oModel = new sap.ui.model.odata.ODataModel(sServiceUrl)
 
