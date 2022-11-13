@@ -1,4 +1,4 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.View1" displayBlock="true">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="project1.controller.View1" >
     <Page id="page" title="{i18n>title}">
         <content>
             <VBox width="100%" direction="Column" id="vbox0">
