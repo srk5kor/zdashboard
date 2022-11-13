@@ -12,21 +12,21 @@
                                     <HBox width="100%" id="hbox0_1668172981008">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0" class="sapUiMediumMarginTop sapUiSmallMarginEnd" />
 
-                                        <NumericContent value="{oCRMModel>/d/results/1/RatingCount}" valueColor="Critical" class="sapUiTinyMarginBein sapUiTinyMarginTop" press="onOpenQueueDialog" id="nc1" />
+                                        <NumericContent value="{oCRMModel>/d/results/0/RatingCount}" valueColor="Critical" class="sapUiTinyMarginBegin sapUiTinyMarginTop" press="onOpenQueueDialog" id="nc1" />
                                     </HBox>
                                     
                                     <!-- </sap.ui.layout.form:content> -->
                                     <List id="list0" class="sapUiTinyMarginBottom">
                                         <items>
                                             <StandardListItem title="system errors" info="{oCRMModel>/d/results/0/DimensionWidth}" id="item2"  press="onOpenSystemDialog" infoState="Error"/>
-                                            <StandardListItem title="App Erros" info="259" id="item1" press="onOpenAppDialog" />
-                                            <StandardListItem title="No of Threads" info="345" id="item3"  press="onOpenThreadDialog"/>
+                                            <StandardListItem title="App Erros" info="{oCRMModel>/d/results/0/DimensionDepth}" id="item1" press="onOpenAppDialog"  infoState="Error"/>
+                                            <StandardListItem title="No of Threads" info="{oCRMModel>/d/results/0/WeightUnit}" id="item3"  press="onOpenThreadDialog"  infoState="Success"/>
                                         </items>
                                     </List>
                                 
                                 <HBox width="100%" id="hbox1">
                                     <Label text="Updated at" width="100%" id="label0" class="sapUiLargeMarginEnd" />
-                                    <Text xmlns="sap.m" text="4th Nov 202" id="text2" class="sapUiLargeMarginBegin" />
+                                    <Text xmlns="sap.m" text="4th Nov 2022" id="text2" class="sapUiLargeMarginBegin" />
                                 </HBox>
                             </sap.ui.layout.form:SimpleForm>
 
@@ -36,15 +36,15 @@
                                     <HBox width="100%" id="hbox0_1668172981008_1">
                                         <Text xmlns="sap.m" text="Queue depth" id="text0_1" class="sapUiLargeMarginEnd sapUiLargeMarginEnd" />
 
-                                        <NumericContent value="75" valueColor="Critical" class="sapUiTinyMarginBein sapUiTinyMarginTop" press="onPress" id="nc2" />
+                                        <NumericContent value="{oCRMModel>/d/results/1/RatingCount}" valueColor="Critical" class="sapUiTinyMarginBegin sapUiTinyMarginTop" press="onPress" id="nc2" />
                                     </HBox>
                                 </sap.ui.layout.form:content>
 
                                 <List id="list0_1" class="sapUiTinyMarginBottom">
                                     <items>
-                                        <StandardListItem title="system errors" info="7" id="item2_1" infoState="Error" />
-                                        <StandardListItem title="App Erros" info="259" id="item1_1" />
-                                        <StandardListItem title="No of Threads" info="345" id="item3_1" />
+                                            <StandardListItem title="system errors" info="{oCRMModel>/d/results/1/DimensionWidth}" id="item2_1"  press="onOpenSystemDialog" infoState="Error"/>
+                                            <StandardListItem title="App Erros" info="{oCRMModel>/d/results/1/DimensionDepth}" id="item1_1" press="onOpenAppDialog"  infoState="Error"/>
+                                            <StandardListItem title="No of Threads" info="{oCRMModel>/d/results/1/WeightUnit}" id="item3_1"  press="onOpenThreadDialog"  infoState="Success"/>
                                     </items>
                                 </List>
 
