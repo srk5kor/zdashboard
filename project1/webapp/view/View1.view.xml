@@ -1,10 +1,9 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  controllerName="project1.controller.View1">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.ui.table" xmlns:n="sam.m.sample.table" xmlns:f="sap.ui.layout.form" controllerName="project1.controller.View1">
     <Page id="page" title="{i18n>title}">
         <IconTabBar id="idIconTabBar" select=".onFilterSelect" class="sapUiResponsiveContentPadding">
             <items>
                 <IconTabFilter class="IconTabFilter" icon="sap-icon://it-system" iconColor="Positive" text="systems" id="ic1">
                     <!-- </items> -->
-
                     <content>
                         <VBox width="100%" direction="Column" id="vbox0">
                             <items>
@@ -168,8 +167,8 @@
                     </content>
                 </IconTabFilter>
                 <IconTabFilter class="IconTabFilter" icon="sap-icon://it-system" iconColor="Neutral" text="Reports" id="ic2">
-                    <!-- <Table id="idProductsTable" inset="false" items="{
-			path: '/ProductCollection',
+                    <Table id="idProductsTable" inset="false" items="{
+			path: '/Products',
 			sorter: {
 				path: 'Name'
 			}
@@ -182,11 +181,11 @@
                                 </content>
                             </OverflowToolbar>
                         </headerToolbar>
-                        <infoToolbar>
+                        <!-- <infoToolbar>
                             <OverflowToolbar>
                                 <Label text="Wide range of available products" />
                             </OverflowToolbar>
-                        </infoToolbar>
+                        </infoToolbar> -->
                         <columns>
                             <Column width="12em">
                                 <Text text="Product" />
@@ -207,16 +206,19 @@
                         <items>
                             <ColumnListItem vAlign="Middle">
                                 <cells>
-                                    <ObjectIdentifier title="{Name}" text="{ProductId}" />
+                                    <ObjectIdentifier title="{Name}" text="{Id}" />
+
                                     <Text text="{SupplierName}" />
-                                    <Text text="{Width} x {Depth} x {Height} {DimUnit}" />
+                                    <Text text="{DimensionWidth} x {DimensionDepth} x {DimensionHeight} {DimensionUnit}" />
+
                                     <ObjectNumber number="{WeightMeasure}" unit="{WeightUnit}" state="{
 							parts: [
 								{path: 'WeightMeasure'},
 								{path: 'WeightUnit'}
 							],
-							formatter: 'sap.m.sample.Table.Formatter.weightState'
+							formatter: '.Formatter.weightState'
 						}" />
+
                                     <ObjectNumber number="{
 								parts:[{path:'Price'},{path:'CurrencyCode'}],
 								type: 'sap.ui.model.type.Currency',
@@ -225,7 +227,7 @@
                                 </cells>
                             </ColumnListItem>
                         </items>
-                    </Table> -->
+                    </Table>
                 </IconTabFilter>
             </items>
         </IconTabBar>
