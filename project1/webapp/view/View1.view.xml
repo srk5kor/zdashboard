@@ -1,4 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:c="sap.ui.core" xmlns:m="sap.ui.table" xmlns:n="sam.m.sample.table" xmlns:f="sap.ui.layout.form" controllerName="project1.controller.View1">
+<!-- <App backgroundColor="#525252"> -->
     <Page id="page" title="{i18n>title}">
         <IconTabBar id="idIconTabBar" select=".onFilterSelect" class="sapUiResponsiveContentPadding">
             <items>
@@ -30,7 +31,11 @@
 
                                             <HBox width="100%" id="hbox1">
                                                 <Label text="Updated at" width="100%" id="label0" class="sapUiLargeMarginEnd" />
-                                                <Text xmlns="sap.m" text="{oCRMModel>/d/results/0/LastModified}" id="text2" class="sapUiLargeMarginBegin" />
+                                                <!-- <Text xmlns="sap.m" text="{oCRMModel>/d/results/0/LastModified}" id="text2" class="sapUiLargeMarginBegin" /> -->
+                                                 <Text id="text2"
+                                                    text="{
+                                                        path: 'oCRMModel>/d/results/0/LastModified',
+                                                        formatter: '.Formatter.formatJSONDate'}"></Text>
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
 
@@ -55,7 +60,11 @@
 
                                             <HBox width="100%" id="hbox1_1_1">
                                                 <Label text="Updated at" width="100%" id="label0_1_1" class="sapUiLargeMarginEnd" />
-                                                <Text xmlns="sap.m" text="{oCRMModel>/d/results/1/LastModified}" id="text2_1_1" class="sapUiLargeMarginBegin" />
+                                                <!-- <Text xmlns="sap.m" text="{oCRMModel>/d/results/1/LastModified}" id="text2_1_1" class="sapUiLargeMarginBegin" /> -->
+                                                <Text id="text2_1_1"
+                                                    text="{
+                                                        path: 'oCRMModel>/d/results/1/LastModified',
+                                                        formatter: '.Formatter.formatJSONDate'}"></Text>
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
                                     </VBox>
@@ -81,7 +90,13 @@
 
                                             <HBox width="100%" id="hbox1_2">
                                                 <Label text="Updated at" width="100%" id="label0_2" class="sapUiLargeMarginEnd" />
-                                                <Text xmlns="sap.m" text="{oECCModel>/d/results/2/LastModified}" id="text2_2" class="sapUiLargeMarginBegin" />
+                                                 <!-- <Text xmlns="sap.m" text="{oECCModel>/d/results/2/LastModified}" id="text2_2" class="sapUiLargeMarginBegin" /> -->
+
+                                                  <Text id="text2_2"
+                                                    text="{
+                                                        path: 'oECCModel>/d/results/8/LastModified',
+                                                        formatter: '.Formatter.formatJSONDate'}"></Text>
+                                                 
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
 
@@ -106,7 +121,11 @@
 
                                             <HBox width="100%" id="hbox1_1_3">
                                                 <Label text="Updated at" width="100%" id="label0_1_3" class="sapUiLargeMarginEnd" />
-                                                <Text xmlns="sap.m" text="{oECCModel>/d/results/3/LastModified}" id="text2_1_3" class="sapUiLargeMarginBegin" />
+                                                <!-- <Text xmlns="sap.m" text="{oECCModel>/d/results/3/LastModified}" id="text2_1_3" class="sapUiLargeMarginBegin" /> -->
+                                                <Text id="text2_1_3"
+                                                    text="{
+                                                        path: 'oECCModel>/d/results/3/LastModified',
+                                                        formatter: '.Formatter.formatJSONDate'}"></Text>
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
                                     </VBox>
@@ -132,7 +151,11 @@
 
                                             <HBox width="100%" id="hbox1_4">
                                                 <Label text="Updated at" width="100%" id="label0_4" class="sapUiLargeMarginEnd" />
-                                                <Text xmlns="sap.m" text="{oBTWModel>/d/results/3/LastModified}" id="text2_4" class="sapUiLargeMarginBegin" />
+                                                <!-- <Text xmlns="sap.m" text="{oBTWModel>/d/results/3/LastModified}" id="text2_4" class="sapUiLargeMarginBegin" /> -->
+                                                <Text id="text2_1_4"
+																				text="{
+								                                                    path: 'oBTWModel>/d/results/4/LastModified',
+							                                                    formatter: '.Formatter.formatJSONDate'}"></Text>
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
 
@@ -157,7 +180,11 @@
 
                                             <HBox width="100%" id="hbox1_1_5">
                                                 <Label text="Updated at" width="100%" id="label0_1_5" class="sapUiLargeMarginEnd" />
-                                                <Text xmlns="sap.m" text="{oBTWModel>/d/results/4/LastModified}" id="text2_1_5" class="sapUiLargeMarginBegin" />
+                                                <!-- <Text xmlns="sap.m" text="{oBTWModel>/d/results/4/LastModified}" id="text2_1_5" class="sapUiLargeMarginBegin" /> -->
+                                                <Text id="text2_1_5"
+																				text="{
+								                                                    path: 'oBTWModel>/d/results/4/LastModified',
+							                                                    formatter: '.Formatter.formatJSONDate'}"></Text>
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
                                     </VBox>
@@ -231,5 +258,7 @@
                 </IconTabFilter>
             </items>
         </IconTabBar>
+        
     </Page>
+    <!-- </App> -->
 </mvc:View>
