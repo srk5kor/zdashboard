@@ -180,11 +180,11 @@
 
                                             <HBox width="100%" id="hbox1_1_5">
                                                 <Label text="Updated at" width="100%" id="label0_1_5" class="sapUiLargeMarginEnd" />
-                                                <!-- <Text xmlns="sap.m" text="{oBTWModel>/d/results/4/LastModified}" id="text2_1_5" class="sapUiLargeMarginBegin" /> -->
-                                                <Text id="text2_1_5"
+                                                <Text xmlns="sap.m" text="{oBTWModel>/d/results/4/LastModified}" id="text2_1_5" class="sapUiLargeMarginBegin" />
+                                                <!-- <Text id="text2_1_5"
 																				text="{
 								                                                    path: 'oBTWModel>/d/results/4/LastModified',
-							                                                    formatter: '.Formatter.formatJSONDate'}"></Text>
+							                                                    formatter: '.Formatter.formatJSONDate'}"></Text> -->
                                             </HBox>
                                         </sap.ui.layout.form:SimpleForm>
                                     </VBox>
