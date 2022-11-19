@@ -33,6 +33,28 @@ sap.ui.define([
                 this.getView().byId("ecccontainer").setModel(oECCModel, "oECCModel")
 
             },
+            onOpenAppDialog: function(oEvent){
+
+                var oView = this.getView()
+                var oDialog = oView.byId("ADialog")
+                // data-sap-ui-resourceroots'{"project1" "./" }'
+                // sap.ui.localResources("webapp"); 
+                if(!oDialog){
+                    oDialog = sap.ui.xmlfragment(oView.getId(), "project1.view.webapp.AppDialog", this)
+                    oView.addDependent(oDialog);
+                }
+
+                oDialog.open()
+
+                var oModel = this.getView().byId('crmcontainer').getModel("oCRMModel")
+
+                oModel.refresh()
+
+                this.getView().setModel(oModel,"oModel");
+
+
+
+            },
             onBeforeRendering(){
                 // ecc 
                 var oBTWModel = new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/Products")

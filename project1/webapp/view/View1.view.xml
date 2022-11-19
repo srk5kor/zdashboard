@@ -23,9 +23,9 @@
                                             <!-- </sap.ui.layout.form:content> -->
                                             <List id="list0" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem title="system errors" info="{oCRMModel>/d/results/0/DimensionWidth}" id="item2" press="onOpenSystemDialog" infoState="Error" />
-                                                    <StandardListItem title="App Erros" info="{oCRMModel>/d/results/0/DimensionDepth}" id="item1" press="onOpenAppDialog" infoState="Error" />
-                                                    <StandardListItem title="No of Threads" info="{oCRMModel>/d/results/0/WeightUnit}" id="item3" press="onOpenThreadDialog" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oCRMModel>/d/results/0/DimensionWidth}" id="item2" press="onOpenSystemDialog" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oCRMModel>/d/results/0/DimensionDepth}" id="item1" press="onOpenAppDialog" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oCRMModel>/d/results/0/WeightUnit}" id="item3" press="onOpenThreadDialog" infoState="Success" />
                                                 </items>
                                             </List>
 
@@ -52,9 +52,9 @@
 
                                             <List id="list0_1" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem title="system errors" info="{oCRMModel>/d/results/1/DimensionWidth}" id="item2_1" press="onOpenSystemDialog" infoState="Error" />
-                                                    <StandardListItem title="App Erros" info="{oCRMModel>/d/results/1/DimensionDepth}" id="item1_1" press="onOpenAppDialog" infoState="Error" />
-                                                    <StandardListItem title="No of Threads" info="{oCRMModel>/d/results/1/WeightUnit}" id="item3_1" press="onOpenThreadDialog" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oCRMModel>/d/results/1/DimensionWidth}" id="item2_1" press="onOpenSystemDialog" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oCRMModel>/d/results/1/DimensionDepth}" id="item1_1" press="onOpenAppDialog" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oCRMModel>/d/results/1/WeightUnit}" id="item3_1" press="onOpenThreadDialog" infoState="Success" />
                                                 </items>
                                             </List>
 
@@ -82,9 +82,9 @@
 
                                             <List id="list0_2" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem title="system errors" info="{oECCModel>/d/results/2/DimensionWidth}" id="item2_2" infoState="Error" />
-                                                    <StandardListItem title="App Erros" info="{oECCModel>/d/results/2/DimensionDepth}" id="item1_2" infoState="Error" />
-                                                    <StandardListItem title="No of Threads" info="{oECCModel>/d/results/2/WeightUnit}" id="item3_2" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oECCModel>/d/results/2/DimensionWidth}" id="item2_2" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oECCModel>/d/results/2/DimensionDepth}" id="item1_2" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oECCModel>/d/results/2/WeightUnit}" id="item3_2" infoState="Success" />
                                                 </items>
                                             </List>
 
@@ -113,9 +113,9 @@
 
                                             <List id="list0_3" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem title="system errors" info="{oECCModel>/d/results/3/DimensionWidth}" id="item2_3" infoState="Error" />
-                                                    <StandardListItem title="App Erros" info="{oECCModel>/d/results/3/DimensionDepth}" id="item1_3" infoState="Error" />
-                                                    <StandardListItem title="No of Threads" info="{oECCModel>/d/results/3/WeightUnit}" id="item3_3" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oECCModel>/d/results/3/DimensionWidth}" id="item2_3" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oECCModel>/d/results/3/DimensionDepth}" id="item1_3" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oECCModel>/d/results/3/WeightUnit}" id="item3_3" infoState="Success" />
                                                 </items>
                                             </List>
 
@@ -143,9 +143,9 @@
 
                                             <List id="list0_4" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem title="system errors" info="{oBTWModel>/d/results/4/DimensionWidth}" id="item2_4" infoState="Error" />
-                                                    <StandardListItem title="App Erros" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item1_4" infoState="Error" />
-                                                    <StandardListItem title="No of Threads" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item3_4" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oBTWModel>/d/results/4/DimensionWidth}" id="item2_4" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item1_4" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item3_4" infoState="Success" />
                                                 </items>
                                             </List>
 
@@ -172,9 +172,9 @@
 
                                             <List id="list0_5" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem title="system errors" info="{oBTWModel>/d/results/5/DimensionWidth}" id="item2_5" infoState="Error" />
-                                                    <StandardListItem title="App Erros" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item1_5" infoState="Error" />
-                                                    <StandardListItem title="No of Threads" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item3_5" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oBTWModel>/d/results/5/DimensionWidth}" id="item2_5" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item1_5" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oBTWModel>/d/results/4/DimensionDepth}" id="item3_5" infoState="Success" />
                                                 </items>
                                             </List>
 
