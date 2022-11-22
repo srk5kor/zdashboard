@@ -40,7 +40,7 @@ sap.ui.define([
                 // data-sap-ui-resourceroots'{"project1" "./" }'
                 // sap.ui.localResources("webapp"); 
                 if(!oDialog){
-                    oDialog = sap.ui.xmlfragment(oView.getId(), "project1.view.webapp.AppDialog", this)
+                    oDialog = sap.ui.xmlfragment(oView.getId(), "project1.webapp.view.AppDialog", this)
                     oView.addDependent(oDialog);
                 }
 
