@@ -54,7 +54,20 @@ sap.ui.define([
 
             },
             onOpenSystemDialog: function(){
+                var oView = this.getView()
+                var oDialog = oView.byId("ADialog")
+                if(!oDialog){
+                    oDialog = sap.ui.xmlfragment(oView.getId(), "project1.view.SystemDialog", this)
+                    oView.addDependent(oDialog);
+                }
 
+                oDialog.open()
+                           
+                var oModel = this.getView().byId('crmcontainer').getModel("oCRMModel")
+
+                oModel.refresh()
+
+                this.getView().setModel(oModel,"oModel");
             },
             onCloseAppDialog: function(){
                 var oView = this.getView()
