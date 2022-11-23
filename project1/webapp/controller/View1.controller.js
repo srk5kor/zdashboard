@@ -55,7 +55,7 @@ sap.ui.define([
             },
             onOpenSystemDialog: function(){
                 var oView = this.getView()
-                var oDialog = oView.byId("ADialog")
+                var oDialog = oView.byId("SDialog")
                 if(!oDialog){
                     oDialog = sap.ui.xmlfragment(oView.getId(), "project1.view.SystemDialog", this)
                     oView.addDependent(oDialog);
@@ -76,6 +76,13 @@ sap.ui.define([
                 oDialog.close();
                 }
             },
+            onCloseAppDialog: function(){
+                var oView = this.getView()
+                var oDialog = oView.byId("SDialog")
+                if(oDialog){             
+                oDialog.close();
+                }
+            },            
             onBeforeRendering(){
                 // ecc 
                 var oBTWModel = new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/Products")

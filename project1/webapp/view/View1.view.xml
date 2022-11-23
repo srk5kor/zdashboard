@@ -17,21 +17,21 @@
                                             <sap.ui.core:Title text="{i18n>crm}" id="title0" />
                                             <HBox width="100%" id="hbox0_1668172981008">
                                                 <Text xmlns="sap.m" text="Queue depth" id="text0" class="sapUiMediumMarginBegin" />
-                                                <NumericContent value="{oCRMModel>/d/results/0/RatingCount}" valueColor="Critical" press="onOpenQueueDialog" id="nc1" />
+                                                <NumericContent value="{oCRMModel>/d/RatingCount}" valueColor="Critical" press="onOpenQueueDialog" id="nc1" />
                                             </HBox>
 
                                             <!-- </sap.ui.layout.form:content> -->
                                             <List id="list0" class="sapUiTinyMarginBottom">
                                                 <items>
-                                                    <StandardListItem type="Active" title="system errors" info="{oCRMModel>/d/results/0/DimensionWidth}" id="item2" press="onOpenSystemDialog" infoState="Error" />
-                                                    <StandardListItem type="Active" title="App Erros" info="{oCRMModel>/d/results/0/DimensionDepth}" id="item1" press="onOpenAppDialog" infoState="Error" />
-                                                    <StandardListItem type="Active" title="No of Threads" info="{oCRMModel>/d/results/0/WeightUnit}" id="item3" press="onOpenThreadDialog" infoState="Success" />
+                                                    <StandardListItem type="Active" title="system errors" info="{oCRMModel>/d/DimensionWidth}" id="item2" press="onOpenSystemDialog" infoState="Error" />
+                                                    <StandardListItem type="Active" title="App Erros" info="{oCRMModel>/d/DimensionDepth}" id="item1" press="onOpenAppDialog" infoState="Error" />
+                                                    <StandardListItem type="Active" title="No of Threads" info="{oCRMModel>/d/WeightUnit}" id="item3" press="onOpenThreadDialog" infoState="Success" />
                                                 </items>
                                             </List>
 
                                             <HBox width="100%" id="hbox1">
                                                 <Label text="Updated at" width="100%" id="label0" class="sapUiLargeMarginEnd" />
-                                                <!-- <Text xmlns="sap.m" text="{oCRMModel>/d/results/0/LastModified}" id="text2" class="sapUiLargeMarginBegin" /> -->
+                                                <!-- <Text xmlns="sap.m" text="{oCRMModel>/d/LastModified}" id="text2" class="sapUiLargeMarginBegin" /> -->
                                                  <Text id="text2"
                                                     text="{
                                                         path: 'oCRMModel>/d/results/0/LastModified',
