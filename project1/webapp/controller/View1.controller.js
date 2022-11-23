@@ -53,6 +53,9 @@ sap.ui.define([
 
 
             },
+            onOpenSystemDialog: function(){
+
+            },
             onCloseAppDialog: function(){
                 var oView = this.getView()
                 var oDialog = oView.byId("ADialog")

@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:core="sap.ui.core" xmlns:t="sap.ui.table" xmlns:n="sam.m.sample.table" xmlns:f="sap.ui.layout.form" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <Dialog id="ADialog" class="sapUiSizeCozy" resizable="true" draggable="true" title="App Error Report" contentHeight="600px" contentWidth="1224px">
+        <ScrollContainer height="100%" width="100%" horizontal="true" vertical="false">
+            <f:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" maxContainerCols="1" />
+            </f:SimpleForm>
+        </ScrollContainer>
+    </Dialog>
+</core:FragmentDefinition>
