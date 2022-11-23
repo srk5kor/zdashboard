@@ -2,7 +2,7 @@
     <Dialog id="ADialog" class="sapUiSizeCozy" resizable="true" draggable="true" title="App Error Report" contentHeight="600px" contentWidth="1224px">
         <ScrollContainer height="100%" width="100%" horizontal="true" vertical="false">
             <f:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout"  maxContainerCols="1">
-                <t:Table id="tblAppTable"  class="sapUiSizeCompact" selectionMode="None" editable="false" rows="{oModel>/d/Supplier/}">
+                <t:Table id="tblAppTables"  class="sapUiSizeCompact" selectionMode="None" editable="false" rows="{oModel>/d/Supplier/}">
                     <t:columns>
                         <t:Column width="4rem" tooltip="Sender Component ">
                             <Label text="Sender Component" />

@@ -20,7 +20,8 @@ sap.ui.define([
 
                 this.getView().setModel(oModel)
 
-                var oCRMModel = new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/Products")
+                var oCRMModel =  new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Products('HT-1066')?$expand=Supplier&$format=json")
+                // new sap.ui.model.json.JSONModel("/sap/opu/odata/sap/EPM_REF_APpS_PROD_MAN_SRV/Products")
 
                 this.getView().byId("crmcontainer").setModel(oCRMModel, "oCRMModel")
 
@@ -37,21 +38,20 @@ sap.ui.define([
 
                 var oView = this.getView()
                 var oDialog = oView.byId("ADialog")
-                // data-sap-ui-resourceroots'{"project1" "./" }'
-                // sap.ui.localResources("webapp"); 
                 if(!oDialog){
                     oDialog = sap.ui.xmlfragment(oView.getId(), "project1.view.AppDialog", this)
                     oView.addDependent(oDialog);
                 }
 
                 oDialog.open()
-
+                           
                 var oModel = this.getView().byId('crmcontainer').getModel("oCRMModel")
 
                 oModel.refresh()
 
                 this.getView().setModel(oModel,"oModel");
-                
+
+
             },
             onCloseAppDialog: function(){
                 var oView = this.getView()
