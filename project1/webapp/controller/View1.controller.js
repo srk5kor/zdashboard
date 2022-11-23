@@ -40,7 +40,7 @@ sap.ui.define([
                 // data-sap-ui-resourceroots'{"project1" "./" }'
                 // sap.ui.localResources("webapp"); 
                 if(!oDialog){
-                    oDialog = sap.ui.xmlfragment(oView.getId(), "project1.webapp.view.AppDialog", this)
+                    oDialog = sap.ui.xmlfragment(oView.getId(), "project1.view.AppDialog", this)
                     oView.addDependent(oDialog);
                 }
 
@@ -51,9 +51,14 @@ sap.ui.define([
                 oModel.refresh()
 
                 this.getView().setModel(oModel,"oModel");
-
-
-
+                
+            },
+            onCloseAppDialog: function(){
+                var oView = this.getView()
+                var oDialog = oView.byId("ADialog")
+                if(oDialog){             
+                oDialog.close();
+                }
             },
             onBeforeRendering(){
                 // ecc 
