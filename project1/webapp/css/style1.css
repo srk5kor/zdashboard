@@ -1,36 +1,31 @@
 .equalColumns1 {
-	background-color: #FCBF49;
+	background-color: #e4551f ;
 	
 }  
-#title0 {
-    background-color: #FCBF49;
-}
  .equalColumns2 {
-	background-color: #F77F00;
+	background-color: #f9f9f9;
 	
 } 
  .equalColumns3 {
-	background-color: #D62828;
+	background-color: #e4551f;
 	
 } 
  .equalColumns4 {
-	background-color: #003049;
+	background-color: #f9f9f9 ;
 	
 } 
  .equalColumns5 {
-	background-color: #364958;
-	
+	background-color: #364958;	
 } 
-
 .HeaderTile1 {
-   background-color: #003049;  
-  border-radius: 5px;
-} 
+   background-color: #f9f9f9;  
+   border-radius: 5px;
+}
 .HeaderTileText1{
-	 color: #FFFFFF;
+	 color: #000000;
 }
 .HeaderTileStatusText1{
-	color: #EAE2B7;
+	color: #e4551f;
 }
 .SimpleFormTitle1{
 	color: #FFFFFF;
@@ -51,4 +46,3 @@
 	background-color: #49adc1;
 	
 } 
-/* Enter your custom styles here */
