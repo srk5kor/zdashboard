@@ -11,11 +11,11 @@
                                 <HBox width="100%" id="hbox0">
                                     <VBox width="30%" direction="Column" id="crmcontainer">
                                         <!-- CRM -->
-                                        <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" class="equalColumns1" editable="false" layout="ResponsiveGridLayout" id="form0" maxContainerCols="1">
+                                        <sap.ui.layout.form:SimpleForm xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns:sap.ui.core="sap.ui.core" editable="false" layout="ResponsiveGridLayout" id="form0" maxContainerCols="1">
                                             <!-- <sap.ui.layout.form:content> -->
 
                                             <sap.ui.core:Title text="{i18n>crm}" id="title0"  />
-                                            <HBox width="100%" id="hbox0_1668172981008" class="equalColumns1">
+                                            <HBox width="100%" id="hbox0_1668172981008">
                                                 <Text xmlns="sap.m" text="Queue depth" id="text0" class="sapUiMediumMarginBegin" />
                                                 <NumericContent value="{oCRMModel>/d/RatingCount}" valueColor="Critical" press="onOpenQueueDialog" id="nc1" />
                                             </HBox>
@@ -29,7 +29,7 @@
                                                 </items>
                                             </List>
 
-                                            <HBox width="100%" id="hbox1" class="equalColumns1">
+                                            <HBox width="100%" id="hbox1">
                                                 <Label text="Updated at" width="100%" id="label0" class="sapUiLargeMarginEnd" />
                                                 <!-- <Text xmlns="sap.m" text="{oCRMModel>/d/LastModified}" id="text2" class="sapUiLargeMarginBegin" /> -->
                                                  <Text id="text2"
